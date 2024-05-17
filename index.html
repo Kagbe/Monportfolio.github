@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonProfil</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /*haut de la page */
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+   list-style: none;
+   font-family: "Poppins", sans-serif;
+}
+header
+{
+    margin-left:100px;
+    position:absolute;
+    left: -40px;
+    right: 0px;
+    top: 40px;
+    text-transform: uppercase;  
+}
+header::first-letter
+{
+    font-size: 3rem;
+    color: rgba(0, 255, 255, 0.63);
+}
+.mon_image{
+    width: 140px;
+    height: 80px;
+    image-rendering:auto;
+    margin-left:  200px ;
+    margin-top: 40px;
+    border-radius: 1000px 1000px;
+    image-orientation: flip;
+}
+nav ul
+{
+    position: absolute;
+    top:0px;
+    left: 700px;
+    right: 0px;
+    float: right;  
+    margin-top: 50px;
+   
+} 
+.nav ul {
+    list-style: none;
+    float: right;
+    
+}
+ .nav a
+ {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 50px;
+    color: #777;
+ } 
+ li a:hover{
+    color: brown;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+   padding: 2px;
+ }
+  .nav ul li
+ { 
+    
+    display: inline-block;
+ } 
+  .back {
+    background-image: url(work-731198_1920.jpg);
+    background-repeat: no-repeat;
+    height: 40rem;
+    width: 100%;
+    color: blanchedalmond;
+    background-position: center center;
+    background-size: cover;
+ }
+ div h2
+ {
+   text-align: center;
+   padding: 100px;
+   text-transform: capitalize;
+   letter-spacing:  5px;
+ }
+.nav .menu-bout
+{
+    width: 45px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: none;
+}
+/* menu de var */
+.divider
+{
+    display: none;
+ 
+    height: 0px; 
+    position: absolute;
+    right: 2rem;
+    top: 35px;
+    width: 200PX;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.open
+{
+    height: 200px;
+}
+.connecter button{
+    text-transform: uppercase;
+    width: 80%;
+    padding: 4px;
+    margin-left: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+.diviser
+{
+    height: 1px;
+    background-color: white;
+    width: 80%;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.divider li
+{
+    display: flex;
+    padding: 0.7rem;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+}
+.divider .connecter
+{
+    width: 80%;
+    justify-content: center;
+  align-items: center;
+}
+@media(max-width:1150px)
+{
+    .nav-links{
+        background: none;
+        display: none;
+    }
+    .nav .menu-bout
+    {
+        display: block;
+        top: 10px;
+        right: 0px;
+    }
+    .divider{
+        display: block;
+    }
+}
+@media(max-width:1250px){
+    .bordure-bas, .bordur-bas{
+        display: none ;
+    }
+}
+@media(max-width:600px)
+{
+  .divider{
+    left: 1.5rem;
+    width: unset;
+  }
+}
+ /* partie de voir mon cv */
+ #cv
+ {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
+ }
+ .bordure-bas
+ {
+    position: relative;
+    width: 80px;
+    left: 592px;
+    top: -2px;
+    height: 5px;
+    background-color: brown;
+    border-radius: 5px;
+ }
+ .nom 
+ {
+    color: brown;
+    font-weight: bold;
+ }
+
+ .gdiv p, ul, li,a
+ {
+    font-size: 14px;
+ }
+.gdiv
+{
+   text-align: center; 
+   text-transform: uppercase;
+   color: #777;
+   margin: 20px;
+   margin-bottom: 40px;
+}
+.gdiv ul li 
+{
+    list-style-type: none; 
+}
+/* partie commentaires */
+div h3
+{
+    text-align: center;
+}
+.bordur-bas
+ {
+    position: relative;
+    width: 320px;
+    left: 472px;
+    top: -4px;
+    height: 5px;
+    background-color: brown;
+    border-radius: 5px;
+ }
+/* style sur le formulaire */
+div .loginform 
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+div .loginform form
+{
+    margin: 0 auto;
+    width: 450px;
+    /* background: rgba(0,0,0,0.4); */
+    background-position: center;
+    padding: 60px;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0px 4px 4px 6px rgba(0,0,0,0.3);
+}
+/* style sur le texte de label */
+div .logininputs label
+{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    /* color: white; */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* style sur les inputs */
+div .logininputs input
+{
+    border: 2px solid #d40339;
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+    border-radius: 8px;
+}
+/* style sur le bouton se connecter */
+div .buttonlogin
+{
+    margin-top: 40px;
+    text-align: center;
+}
+/* style sur le boutton se connecter  */
+div .buttonlogin button
+{
+    font-size: 25px;
+    padding: 10px 30px;
+    background: #f685a2;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #fff;
+}
+textarea{
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+/* partie de contacts */
+#contact
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 35px;
+}
+.h3
+{
+    text-decoration: underline;
+}
+.divPC
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   text-transform: capitalize; 
+}
+.icons
+{
+    margin: 15px;
+    word-spacing: 150px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.fa-brands
+{
+    font-size: 40px;
+  
+}
+span i{
+    font-size: 40px;
+}
+P i{
+    display: block;
+}
+.pdernier{
+    float: right;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-right: 50px;
+}
+.copy{
+    margin-left: 70px;
+    color: #ffffffc7;
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>        
+        <head class="mon">mon profil</head>
+    </header>
+    <img src="kagbe.jpg" class="mon_image" alt="ma photo">
+    
+    <nav class="nav">
+        <div class="nav-links">
+        <ul>
+            <li><a href="#cv">voir mon c.v</a></li>
+            <li><a href="#avis">vos avis</a></li>
+            <li><a href="#contact">mes contacts</a></li>
+        </ul>
+      </div>
+       <div class="menu-bout ">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="divider ">
+        <ul>
+            <li><a href="#cv">voir mon c.v</a></li>
+            <li><a href="#avis">vos avis</a></li>
+            <li><a href="#contact">mes contacts</a></li>
+        </ul>
+        <div class="diviser">
+
+        </div>
+        <div class="connecter">
+           <button ><a href="#avis">se connecter</a></button>
+        </div>
+    </div>
+
+    
+        <div class="back">
+            <h2>
+                bienvenue sur<br> <br>mon  mini-site<br><br> de profil <br> <br> au cours de <br><br>mes apprendissages
+            </h2>
+            
+        </div>
+    <div >
+      <h4 id="cv">Mon c.v</h4>
+      <div class="bordure-bas"></div>
+    </div>
+      <div class="gdiv">
+        <p>je me réponds au nom de <span class="nom">KAGBE MATHIAS</span><br>
+        matricule :: <span class="nom">21A291fs</span> <br>
+        je suis un étudiant en troisième année (l3inf) à l'université de Ngaoundéré
+        <br>filiere::<span class="nom"> informatique</span> <br>
+         voici les langages de programmation que j'ai appris codés sont les suivants::
+     <ul>
+        <li>-Le C et C++</li>
+        <li>-le Java</li>
+        <li>-MySql</li>
+        <li>-le JavaScript</li>
+        <li>-HTML</li>
+        <li>-CSS</li>
+        <li>-Un peu de Python</li>
+     </ul>
+     </p>
+     </div>
+       <div><h3>laissez vos avis sur le formulaire</h3></div> 
+        <div class="bordur-bas"></div>
+    <div id="avis">
+      
+        <div class="loginform">
+            <form action="">
+                <div class="logininputs">
+                    <label for="user">votre nom utilisateur</label> 
+                    <input type="text" name="user" id="" placeholder="Nom Utilisateur">
+                </div>
+                <br><br>
+                <div class="logininputs">
+                    <label for="passe">votre mot de passe</label>
+                    <input type="password" name="passe" id="" placeholder="Mot de Passe">
+                </div>
+                <div class="logininputs">
+                    <label for="message">votre message...</label>
+                   <textarea name="message" id="" cols="30" rows="3" placeholder="Laissez un message ici"></textarea>
+                </div>
+                <div class="buttonlogin">
+                    <button >valider</button>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+
+    <div id="contact">
+        <footer>
+        <h3 class="h3">contactez-nous</h3>
+        <div class="divPC">
+           <p>vous pouvez me trouver partout sur les réseaux sociaux ou sur mes numéros téléphoniques</p>
+           <p>alors le clavier est à vous,donc contactez-moi si vous avez besoin d'un service!
+             suis disponible 24h/24</p>  
+             <div class="icons">
+                <a href="#" >whatsapp<i class="fa-brands fa-whatsapp"></i></a>
+                <a href="">insta<i class="fa-brands fa-instagram"></i></a>
+                <a href="">facebook<i class="fa-brands fa-facebook"></i></a>
+                <a href="">twitter<i class="fa-brands fa-twitter"></i></a>
+                <!-- <a href=""><img src="/image/phone-volume-solid.svg" alt=""></a> -->
+                <span class="phone">contacts<i class="fa-solid fa-phone-volume"></i>
+                    
+                </span>
+            </div>
+            <p class="pdernier"><i>+237 659 51 11 00</i>
+                <i>+237 654 35 40 30</i>
+            </p>
+        </div>
+    </footer>
+    <footer class="copy">copyright@2024</footer>
+    </div>
+
+    <!-- partie de javascript -->
+   <script>
+    const menubout= document.querySelector('.menu-bout')
+    const Boutonicon= document.querySelector('.menu-bout i')
+    const bouton= document.querySelector('.divider')
+    menubout.onclick = function(){
+        bouton.classList.toggle('open')
+        const isOpen= bouton.classList.contains('open')
+        Boutonicon.classList= isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+    }
+   </script>
+</body>
+</html>
